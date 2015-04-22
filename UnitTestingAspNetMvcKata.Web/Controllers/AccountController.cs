@@ -31,7 +31,7 @@ namespace UnitTestingAspNetMvcKata.Web.Controllers
                 _userRepository.Create(newUser);
                 _mailer.Send("no@reply", newUser.Email, "Welcome", "Welcome email message");
 
-                return View("Index", "Home");
+                return RedirectToAction("Index", "Home");
             }
 
             return View(viewModel);
