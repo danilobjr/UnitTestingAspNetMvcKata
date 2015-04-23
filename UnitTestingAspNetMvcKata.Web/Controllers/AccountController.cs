@@ -72,7 +72,7 @@ namespace UnitTestingAspNetMvcKata.Web.Controllers
 
             _userRepository.Delete(viewModel.UserId);
 
-            return View("Index", "Home");
+            return RedirectToAction("Index", "Home");
         }
     }
 }
