@@ -8,12 +8,12 @@ namespace UnitTestingAspNetMvcKata.Web.Repositories
 {
     public class UserRepository
     {
-        internal void Create(Models.User newUser)
+        public virtual void Create(Models.User newUser)
         {
             Console.WriteLine("EXTERNAL DEPENDENCY - creating new user in db...");
         }
 
-        internal User FindById(int id)
+        public virtual User FindById(int id)
         {
             Console.WriteLine(string.Format("EXTERNAL DEPENDENCY - looking for user with id {0}...", id));
 
@@ -25,7 +25,7 @@ namespace UnitTestingAspNetMvcKata.Web.Repositories
             };
         }
 
-        internal void Delete(int id)
+        public virtual void Delete(int id)
         {
             Console.WriteLine("EXTERNAL DEPENDENCY - removing user from db...");
         }
